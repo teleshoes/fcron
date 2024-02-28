@@ -200,8 +200,8 @@ auth_client_getpeer(struct fcrondyn_cl *client)
     /* Successfully identified user: */
     client->fcl_user = strdup2(p_entry->pw_name);
 
-    explain("Client's pid=%d, uid=%d, username=%s",
-            ucred_getpid(ucred), uid, client->fcl_user);
+    //explain("Client's pid=%d, uid=%d, username=%s",
+    //        ucred_getpid(ucred), uid, client->fcl_user);
 
 }
 #endif                          /* HAVE_GETPEERUCRED */
