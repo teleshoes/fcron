@@ -69,7 +69,7 @@ seteuid_safe(uid_t euid)
      * which is why we need to check if a change is needed */
 
     if (geteuid() != euid && seteuid(euid) != 0)
-        die_e("could not change euid to %d", euid);
+        error_e("could not change euid to %d", euid);
 
 }
 
@@ -82,7 +82,7 @@ setegid_safe(gid_t egid)
      * which is why we need to check if a change is needed */
 
     if (getegid() != egid && setegid(egid) != 0)
-        die_e("could not change egid to %d", egid);
+        error_e("could not change egid to %d", egid);
 
 }
 #endif                          /* def USE_SETE_ID */
