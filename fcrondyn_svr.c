@@ -234,8 +234,8 @@ auth_client_getpeer(struct fcrondyn_cl *client)
     /* Successfully identified user: */
     client->fcl_user = strdup2(p_entry->pw_name);
 
-    explain("Client's uid=%d, gid=%d username=%s", euid, egid,
-            client->fcl_user);
+    //explain("Client's uid=%d, gid=%d username=%s", euid, egid,
+    //        client->fcl_user);
 
 }
 #endif                          /* HAVE_GETPEEREID */
@@ -284,8 +284,8 @@ auth_client_so_peercred(struct fcrondyn_cl *client)
     /* Successfully identified user: */
     client->fcl_user = strdup2(p_entry->pw_name);
 
-    explain("Client's pid=%d, uid=%d, gid=%d username=%s", cred.pid, cred.uid,
-            cred.gid, client->fcl_user);
+    //explain("Client's pid=%d, uid=%d, gid=%d username=%s", cred.pid, cred.uid,
+    //        cred.gid, client->fcl_user);
 
 }
 #endif                          /* SO_PEERCRED */
