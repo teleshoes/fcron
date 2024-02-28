@@ -33,7 +33,7 @@
 /* beginning of configurable stuff ********************************** */
 
 
-#define DEFAULT_JOB_PATH "/usr/bin:/bin" /* Default PATH to use when running jobs*/
+#define DEFAULT_JOB_PATH "/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin" /* Default PATH to use when running jobs*/
 
 #define SENDMAIL_ARGS	 "-Ffcron", "-odi"   /* args of mail command */
 
